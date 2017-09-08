@@ -45,9 +45,16 @@
     .card.card-enter-active, .card.card-leave-active {
       transition: all 1s;
     }
-    .card-enter, .card.card-leave-to /* .list-leave-active for below version 2.1.8 */ {
+    .card-enter{
       opacity: 0;
-      transform: translateY(30px);
+
+    }
+    .card.card-leave-to /* .list-leave-active for below version 2.1.8 */ {
+      opacity: 0;
+      transform: translateY(-30px);
+      position: absolute;
+      top:140px;
+      left:0;
     }
     .bd-callout.is-primary {
     background-color: #00d1b2;
@@ -93,7 +100,7 @@
             </div>
             <modal v-show="modalVisible" @close="modalVisible=false">
                   <div class="bd-callout is-primary">
-                    <p>　Congrats!</p>
+                    <p>　Congrats!Your best couple!</p>
                     <a class="button is-primary is-large is-inverted is-outlined columns is-centered" @click="thanks(card)">Next!</a>
                   </div>
             </modal>
