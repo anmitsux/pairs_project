@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosansjp.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <style media="screen">
-
+    ul,li{
+      list-style: none;
+    }
     #app {
       font-family: 'Noto Sans Japanese', sans-serif;
       font-size: 20px;
@@ -47,7 +49,6 @@
     }
     .card-enter{
       opacity: 0;
-
     }
     .card.card-leave-to /* .list-leave-active for below version 2.1.8 */ {
       opacity: 0;
@@ -62,7 +63,9 @@
     }
     .bd-callout {
         background-color: whitesmoke;
-
+    }
+    [v-cloak] {
+      display:none;
     }
     </style>
   </head>
@@ -77,13 +80,13 @@
             <div class="card-content">
               <div class="media">
                 <div class="media-content">
-                  <p class="title is-4">{{card.name}} {{card.old}}olds {{card.city}}</p>
+                  <p class="title is-4" v-cloak>{{card.name}} {{card.old}}olds {{card.city}}</p>
                   <p class="subtitle is-6"><i class="fa fa-commenting-o" aria-hidden="true"></i> Im so free!</p>
                 </div>
               </div>
               <hr>
               <p class="title is-4">Introduction</p>
-              <div class="content">{{card.content}}</div>
+              <div class="content" v-cloak>{{card.content}}</div>
               <hr>
               <div class="tags">
                 <span class="tag is-rounded is-outlined is-primary">vue</span>
@@ -106,16 +109,7 @@
             </modal>
           </li>
         </transition-group>
-          <li v-show="lastLiVisible">null isn't it?</li>
-        <!-- <div v-for="card in cards" class="card">
-          <div class="button_area_wrap" :class="{ \'is-active\':card.isActive}">
-            {{card.name}}
-            <div class="button_area">
-              <a class="button is-outlined is-black is-large">Skip</a>
-              <a class="button is-danger is-large is-outlined">Thanks!</a>
-            </div>
-          </div>
-        </div> -->
+          <li v-show="lastLiVisible">empty!</li>
       </div>
     </div>
     <script src="https://unpkg.com/vue"></script>

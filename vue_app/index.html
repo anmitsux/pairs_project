@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vue_app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosansjp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style media="screen">
+    ul,li{
+      list-style: none;
+    }
+    #app {
+      font-family: 'Noto Sans Japanese', sans-serif;
+      font-size: 20px;
+    }
+    .card{
+
+    }
+    .button_area_wrap{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height:auto;
+    text-align: center;
+    background: rgba(255,255,255,0.3);
+    }
+    .button_area{
+      line-height: 80px;
+      padding-top: 20px;
+      display: block;
+      margin:0 auto;
+    }
+    .button:nth-child(1){
+      margin-right: 5px;
+    }
+    .bd-callout .button:nth-child(1){
+      margin-right: 0!important;
+    }
+    .columns{
+      margin: 0;
+    }
+    .columns:last-child {
+     margin-bottom: 0!important;
+    }
+    .card.card-enter-active, .card.card-leave-active {
+      transition: all 1s;
+    }
+    .card-enter{
+      opacity: 0;
+    }
+    .card.card-leave-to /* .list-leave-active for below version 2.1.8 */ {
+      opacity: 0;
+      transform: translateY(-30px);
+      position: absolute;
+      top:140px;
+      left:0;
+    }
+    .bd-callout.is-primary {
+    background-color: #00d1b2;
+    color: #fff;
+    }
+    .bd-callout {
+        background-color: whitesmoke;
+    }
+    [v-cloak] {
+      display:none;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
