@@ -76,7 +76,7 @@
 
           <transition-group name="card" tag="ul">
           <li v-for="(card,index) in cards" class="card" v-bind:key="index" v-if="card.isActive">
-            <div class="card-image"><figure class="image is-4by3"><img :src="card.url" alt="Image"></figure></div>
+            <div class="card-image"><figure class="image is-4by3"><img v-for="url in card.url" :src="url"></figure></div>
             <div class="card-content">
               <div class="media">
                 <div class="media-content">
@@ -95,7 +95,7 @@
               </div>
             </div>
             <div class="section"></div>
-            <div class="button_area_wrap" class="is-active" v-bind:style="{'z-index' : ''+cards.length-index+''}">
+            <div class="button_area_wrap" :class="is-active" v-bind:style="{'z-index' : ''+cards.length-index+''}">
               <div class="button_area">
                 <a class="button is-outlined is-black is-large" @click="skipCard(card)">Skip</a>
                 <a class="button is-danger is-large is-outlined" @click="modalVisible=true">Thanks!</a>

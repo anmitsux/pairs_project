@@ -12,7 +12,10 @@ new Vue({
       name:"ketty",
       city:"tokyo",
       old:"31",
-      url:"assets/profile_img1.jpg",
+      url:[
+        "assets/profile_img1.jpg",
+        "assets/profile_img1-1.jpg"
+      ],
       content:"1Lorem ipsum dolor sit amet, consectetur adipiscing elit.Phasellus nec iaculis mauris.",
       isActive:true
     },
@@ -20,7 +23,10 @@ new Vue({
       name:"micky",
       city:"tokyo",
       old:"28",
-      url:"assets/profile_img2.jpg",
+      url:[
+        "assets/profile_img2.jpg",
+        "assets/profile_img2-1.jpg"
+      ],
       content:"2Lorem ipsum dolor sit amet, consectetur adipiscing elit.Phasellus nec iaculis mauris.",
       isActive:false
     },
@@ -28,7 +34,10 @@ new Vue({
       name:"chaly",
       city:"tokyo",
       old:"48",
-      url:"assets/profile_img3.jpg",
+      url:[
+        "assets/profile_img3.jpg",
+        "assets/profile_img3-1.jpg"
+      ],
       content:"3Lorem ipsum dolor sit amet, consectetur adipiscing elit.Phasellus nec iaculis mauris.",
       isActive:false
     }],
